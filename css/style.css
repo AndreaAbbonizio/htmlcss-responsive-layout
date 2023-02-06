@@ -14,13 +14,17 @@ body{
 }
 
 /* navbar */
+nav{
+    background-color: #0084fd;
+}
+
+
 nav .container-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     height: 80px;
-    background-color: #0084fd;
     padding: 0 1.5em;
     margin-bottom: 40px;
 }
@@ -34,6 +38,12 @@ nav .container-nav{
 nav .container-nav .list-nav{
     display: none;
 }
+
+nav .container-nav .list-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
 
 nav .container-nav .icon-nav .fa-bars{
     font-size: 1.5em;
@@ -331,7 +341,7 @@ footer .container-footer a{
 /*/ footer */
 
 /* media queries */
-@media screen and (min-width:760px) {
+@media screen and (min-width:760px){
 
     .container-centered{
         max-width: 700px;
@@ -391,5 +401,53 @@ footer .container-footer a{
     }
 
 
+}
+
+
+@media  screen and (min-width : 1200px) {
+    .container-centered{
+        max-width: 1000px;
+    }
+
+    nav .container-nav{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .icon-nav{
+        display: none;
+    }
+
+    nav .container-nav .list-nav{
+        display: inline-block;
+    }
+
+    nav .container-nav .list-nav ul{
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+    }
+
+    header .container-header .row .sign-card{
+        flex-direction: row;
+    }
+
+    main .container-flex{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    main .benefit-back .benefit-container .benefit-cards .card {
+        width: calc(100% / 3 - 20px / 3 * 2 );
+    }
+
+    main .about-us-container{
+        justify-content: space-around;
+    }
+
+    main .about-us-container .about-card{
+        width: 30%;
+    }
 }
 /* /media queries */
