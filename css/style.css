@@ -8,6 +8,11 @@ body{
     font-family: sans-serif;
 }
 
+.container-centered{
+    max-width: 350px;
+    margin: auto;
+}
+
 /* navbar */
 nav .container-nav{
     display: flex;
@@ -44,7 +49,7 @@ header .container-header .row  .sign-card {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    margin: 0 60px 60px;
+    margin-bottom: 60px;
     background-color: #b5ddff;
     border-radius: 16px;
 }
@@ -71,20 +76,32 @@ header .container-header .row .sign-card .image-sign img{
     height: 100%;
 }
 
+header .container-header .row .card-header-right{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 60px;
+    background-color: #b5ddff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+header .container-header .row  .icon-card{
+    font-size: 4em;
+}
+
 header .container-header .row .card-header{
     display: flex;
     flex-flow: column;
     align-items: center;
     gap: 20px;
     padding: 20px;
-    margin: 0 60px 60px;
+    margin-bottom: 60px;
     background-color: #b5ddff;
     border-radius: 16px;
     text-align: center;
-}
-
-header .container-header .row .card-header .icon-card{
-    font-size: 4em;
 }
 
 
@@ -141,7 +158,6 @@ main .planning-container .container-right .icon-right .fa-arrow-down{
 
 
 main .testimonial-container{
-    margin: 0 60px 100px;
     text-align: center;
 }
 main .testimonial-container> *{
@@ -194,9 +210,6 @@ main .benefit-back{
     padding-bottom: 60px;
 }
 
-main .benefit-back .benefit-container{
-    margin: 0 60px;
-}
 
 main .benefit-back .benefit-container .title{
     text-align: center;
@@ -227,8 +240,7 @@ main .benefit-back .benefit-container .benefit-cards  .card span{
 /* about us */
 
 main .about-us-container{
-    margin: 0 60px;
-    padding-top: 40px 0 60px;
+    padding-top: 60px;
 }
 
 
@@ -291,4 +303,93 @@ main .main-bottom .container-bottom .free{
 /*/ main bottom */
 
 /*/ main */
+ 
 
+/* footer */
+
+footer{
+    background-color: #333333;
+}
+
+footer .container-footer{
+    padding: 30px 60px;
+    color: white;
+    text-align: center;
+}
+
+footer .container-footer>*{
+    margin-bottom: 30px;
+}
+
+footer .container-footer a{
+    color: blue;
+}
+
+
+
+
+/*/ footer */
+
+/* media queries */
+@media screen and (min-width:760px) {
+
+    .container-centered{
+        max-width: 700px;
+    }
+    .container-header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-header .row{
+        display: flex;
+        gap:20px;
+    }
+
+    header .container-header .row .sign-card{
+        align-items: flex-start;
+        width: calc(100% / 3 * 2 - 20px / 3 * 2);
+    }
+
+    header .container-header .row .card-header-right{
+        width: calc(100% / 3 - 20px / 3);
+    }
+
+    
+    main .testimonial-container .testimonial-cards .card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main .testimonial-container .testimonial-cards .card .text-testimonial{
+        width: 50%;
+        margin: auto;
+    }
+
+    main .benefit-back .benefit-container .benefit-cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px
+    }
+
+    main .benefit-back .benefit-container .benefit-cards .card{
+        width: calc(100% / 2 - 20px / 2 )
+    }
+
+    main .about-us-container {  
+        display: flex;
+    }
+
+    main .about-us-container .text-about {
+        width: 50%;
+        padding-right: 30px;
+    }
+
+    main .about-us-container .about-card{
+        width: 50%;
+    }
+
+
+}
+/* /media queries */
