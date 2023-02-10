@@ -13,6 +13,28 @@ body{
     margin: auto;
 }
 
+
+
+.btn-primary{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 16px;
+}
+
+.btn-blue{
+    color: white;
+    background-color: #0084fd;
+}
+
+.btn-purple{
+    background-color: #9792e4;
+    color: white;
+}
+
+.btn-bottom{
+    font-size: 1.2em;
+}
+
 /* navbar */
 nav{
     background-color: #0084fd;
@@ -39,6 +61,8 @@ nav .container-nav .list-nav{
     display: none;
 }
 
+
+
 nav .container-nav .list-nav ul li a{
     text-decoration: none;
     color: white;
@@ -59,6 +83,7 @@ header .container-header .row  .sign-card {
     align-items: center;
     gap: 20px;
     padding: 20px;
+    padding-bottom: 0;
     margin-bottom: 60px;
     background-color: #b5ddff;
     border-radius: 16px;
@@ -68,12 +93,14 @@ header .container-header .row .sign-card .text-sign > *{
     margin-bottom: 20px;
 }
 
-header .container-header .row .sign-card .text-sign h2{
-    text-align: center;
-}
+
 
 header .container-header .row .sign-card .text-sign .btn-header{
     text-align: center;
+}
+
+header .container-header .row .sign-card .text-sign .btn-header button i{
+    margin-right: 5px;
 }
 
 
@@ -245,6 +272,14 @@ main .benefit-back .benefit-container .benefit-cards  .card span{
     color: #9792e4;
 }
 
+.btn-purple{
+    background-color: #9792e4;
+    color: white;
+}
+
+
+
+
 /* /benefit */
 
 /* about us */
@@ -262,6 +297,8 @@ main .about-us-container .about-card{
     position: relative;
     color: #9792e4;
 }
+
+
 
 main .about-us-container .about-card .image-about{
     width: 150px;
@@ -286,6 +323,11 @@ main .about-us-container .about-card .icon-absolute{
     font-size: 3em;
 }
 
+main .about-us-container .about-card .btn .btn-purple .fa-linkedin{
+    margin-right: 5px;
+}
+
+
 
 /*/ about us */
 /* main bottom */
@@ -295,8 +337,10 @@ main .main-bottom{
 
 
 main .main-bottom .container-bottom{
+    max-width: 350px;
+    margin: auto;
     text-align: center;
-    padding: 30px 60px;
+    padding: 30px 0;
 }
 
 
@@ -341,6 +385,20 @@ footer .container-footer a{
 /*/ footer */
 
 /* media queries */
+@media screen and ( max-width:400px) {
+    .container-centered{
+        max-width: 300px;
+    }
+
+    main .main-bottom .container-bottom{
+        max-width: 300px;
+    }
+
+}
+
+
+
+
 @media screen and (min-width:760px){
 
     .container-centered{
@@ -404,9 +462,9 @@ footer .container-footer a{
 }
 
 
-@media  screen and (min-width : 1200px) {
+@media  screen and (min-width : 968px) {
     .container-centered{
-        max-width: 1000px;
+        max-width: 950px;
     }
 
     nav .container-nav{
@@ -425,9 +483,13 @@ footer .container-footer a{
 
     nav .container-nav .list-nav ul{
         display: flex;
+        align-items: center;
         gap: 20px;
         list-style-type: none;
     }
+
+
+
 
     header .container-header .row .sign-card{
         flex-direction: row;
@@ -451,3 +513,22 @@ footer .container-footer a{
     }
 }
 /* /media queries */
+
+
+/* hover */
+nav .container-nav .list-nav ul li a:hover{
+    text-decoration-line: underline;
+}
+
+.btn-primary:hover{
+    transform: scale(1.2);
+}
+
+main .main-bottom .container-bottom .copyright a:hover{
+    color: white;
+}
+
+footer .container-footer p a:hover{
+    color: white;
+}
+/* /hover */
